@@ -4,6 +4,7 @@ package net.easycloud.packet;
 import net.easycloud.packet.list.HelloPacket;
 import net.easycloud.packet.list.PingPacket;
 
+import java.net.Socket;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -35,9 +36,9 @@ public class PacketManager {
         return packetList.get(packetId);
     }
 
-    public void processPacket(Packet packet) {
+    public void processPacket(Socket socket, Packet packet) {
         if (globalPacketListener != null) {
-            globalPacketListener.listen(packet);
+            globalPacketListener.listen(socket, packet);
         }
     }
 

@@ -1,9 +1,11 @@
 package net.easycloud.packet;
 
 
+import java.net.Socket;
+
 public interface GlobalPacketListener {
 
-    void listen(Packet p);
+    void listen(Socket socket, Packet p);
 
 
 }
