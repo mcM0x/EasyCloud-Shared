@@ -29,14 +29,12 @@ public class JsonPacket<O> implements Packet {
     public void write(DataOutputStream outputStream) throws IOException {
         String s = GSON.toJson(payload);
         outputStream.writeUTF(s);
-        System.out.println(payload);
     }
 
     @Override
     public void read(DataInputStream inputStream) throws IOException {
         String json = inputStream.readUTF();
         payload = (O) GSON.fromJson(json, payloadClass);
-        System.out.println(payload);
     }
 
     public O getPayload() {
