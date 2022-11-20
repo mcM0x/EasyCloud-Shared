@@ -35,8 +35,6 @@ public class JsonPacket<O> implements Packet {
     @Override
     public void read(DataInputStream inputStream) throws IOException {
         String json = inputStream.readUTF();
-        System.out.println("reading: " + json);
-        System.out.println("payload class:" + payloadClass.getSimpleName());
         payload = (O) GSON.fromJson(json, payloadClass);
         System.out.println(payload);
     }

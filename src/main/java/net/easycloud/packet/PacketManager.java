@@ -36,7 +36,6 @@ public class PacketManager {
     }
 
     public void processPacket(Packet packet) {
-        System.out.println("processing packet " + packet.getClass().getSimpleName());
         if (globalPacketListener != null) {
             globalPacketListener.listen(packet);
         }
