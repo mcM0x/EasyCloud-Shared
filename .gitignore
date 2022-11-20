@@ -13,7 +13,6 @@
 /target/classes/net/easycloud/packet/factory/PacketManagerFactory.class
 /target/classes/net/easycloud/packet/list/PingPacket.class
 /target/maven-archiver/pom.properties
-/pom.xml
 /target/shared-1.0-SNAPSHOT.jar
 /.idea/vcs.xml
 /.idea/.gitignore
